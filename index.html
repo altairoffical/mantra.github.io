@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mantra.github.io/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Moon</title>
 </head>
 <body>
-       <div></div> 
+    <header>
+        <a href="#" class="logo">Moon</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars" alt="">
+        <img src="img/moon.png" id="moon" alt="">
+        <img src="img/mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis quaerat repudiandae earum consequuntur ipsum optio, voluptatum, architecto magnam aliquid culpa laborum. Voluptas quo fugit corporis. Dolorum fugiat repudiandae blanditiis!
+        Repudiandae natus rerum itaque nulla eum soluta numquam voluptate, dolorum harum eveniet nobis non facere illum expedita! Dicta culpa ex earum fuga quo, voluptatibus a id modi, nulla suscipit exercitationem.
+        Eos iste, eaque voluptates optio doloribus officia modi quidem nobis debitis ipsa explicabo odit minima! Reprehenderit, eaque. Recusandae dolor ullam consequatur et aliquam? Totam, odio expedita numquam assumenda saepe eaque. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis quaerat repudiandae earum consequuntur ipsum optio, voluptatum, architecto magnam aliquid culpa laborum. Voluptas quo fugit corporis. Dolorum fugiat repudiandae blanditiis!
+        Repudiandae natus rerum itaque nulla eum soluta numquam voluptate, dolorum harum eveniet nobis non facere illum expedita! Dicta culpa ex earum fuga quo, voluptatibus a id modi, nulla suscipit exercitationem.
+        Eos iste, eaque voluptates optio doloribus officia modi quidem nobis debitis ipsa explicabo odit minima! Reprehenderit, eaque. Recusandae dolor ullam consequatur et aliquam? Totam, odio expedita numquam assumenda saepe eaque. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis quaerat repudiandae earum consequuntur ipsum optio, voluptatum, architecto magnam aliquid culpa laborum. Voluptas quo fugit corporis. Dolorum fugiat repudiandae blanditiis!
+        Repudiandae natus rerum itaque nulla eum soluta numquam voluptate, dolorum harum eveniet nobis non facere illum expedita! Dicta culpa ex earum fuga quo, voluptatibus a id modi, nulla suscipit exercitationem.
+        Eos iste, eaque voluptates optio doloribus officia modi quidem nobis debitis ipsa explicabo odit minima! Reprehenderit, eaque. Recusandae dolor ullam consequatur et aliquam? Totam, odio expedita numquam assumenda saepe eaque. <br><br> </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars'); 
+        let moon = document.getElementById('moon'); 
+        let mountains_behind = document.getElementById('mountains_behind'); 
+        let text = document.getElementById('text'); 
+        let btn = document.getElementById('btn'); 
+        let mountains_front = document.getElementById('mountains_front');
+        
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0.5 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 2 + 'px';
+        })
+    </script>
+
 </body>
 </html>
